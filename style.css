@@ -1,0 +1,145 @@
+/* Global styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #282a36;
+  color: #ebdbb2;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.9;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Container for days */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 20px;
+}
+
+.day {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #3c3836;
+  border-color: #504945;
+}
+
+.exercises {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.exercises > div {
+  width: calc(
+    50% - 20px
+  ); /* 50% del ancho del contenedor menos el espacio entre elementos */
+  margin-right: 20px; /* Espacio entre elementos */
+  margin-bottom: 20px; /* Espacio entre filas */
+  padding: 10px;
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+  flex-direction: column;
+}
+
+.exercises > div:first-child {
+  margin-right: 20px;
+}
+
+/* Exercise details */
+.exercise {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #3c3836;
+}
+
+.exercise h3 {
+  margin-top: 10px;
+}
+
+.exercise p {
+  margin-bottom: 0;
+}
+
+.exercise img {
+  max-width: 100%;
+  height: auto;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+/* Toggle button */
+.toggle-button {
+  display: block;
+  text-align: center;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #504945;
+  color: #ebdbb2;
+}
+
+/* Hidden exercises */
+.hidden {
+  display: none;
+}
+
+.footer {
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 98%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #3c3836; /* Fondo del footer */
+  color: #ebdbb2; /* Color del texto del footer */
+}
+
+.footer a:link,
+.footer a:visited {
+  color: #83a598; /* Color de los enlaces no visitados y visitados */
+  text-decoration: none; /* Eliminar subrayado de los enlaces */
+}
+
+.footer a:hover,
+.footer a:active {
+  color: #fe8019; /* Color de los enlaces al pasar el mouse y al estar activos */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .exercises {
+    display: block;
+  }
+
+  .exercises > div {
+    width: 95%;
+  }
+
+  .exercise img {
+    width: 100%;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
